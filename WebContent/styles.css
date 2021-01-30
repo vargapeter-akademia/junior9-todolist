@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.container {
+	width: 50%;
+	margin: auto;
+	padding-top: 18px;
+}
+
+input[type=text], input[type=password], input[type=datetime-local] {
+	width: 100%;
+	margin: 10px 0px;
+	display: inline-block;
+	text-align: center;
+	font-size: 24px;
+}
+
+label {
+	text-align: left;
+}
