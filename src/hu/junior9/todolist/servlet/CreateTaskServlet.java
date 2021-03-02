@@ -2,7 +2,6 @@ package hu.junior9.todolist.servlet;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Optional;
 
 import javax.servlet.ServletException;
@@ -18,6 +17,7 @@ import hu.junior9.todolist.entity.Task;
 import hu.junior9.todolist.entity.User;
 
 public class CreateTaskServlet extends HttpServlet {
+
 // DateTimeFormatter.ISO_LOCAL_DATE_TIME
 	private static final long serialVersionUID = 1L;
 
@@ -26,12 +26,9 @@ public class CreateTaskServlet extends HttpServlet {
 		String summary = req.getParameter("summary");
 		String dueDateParam = req.getParameter("dueDate");
 
-		LocalDateTime dueDate = Optional.ofNullable(dueDateParam)
-				.map(LocalDateTime::parse)
-				.orElse(null);
+		LocalDateTime dueDate = Optional.ofNullable(dueDateParam).map(LocalDateTime::parse).orElse(null);
 
-		User user = (User) req.getSession()
-				.getAttribute("loggedInUser");
+		User user = (User) req.getSession().getAttribute("loggedInUser");
 		StateEnumDao stateEnumDao = new StateEnumDaoImp();
 
 		Task task = new Task();

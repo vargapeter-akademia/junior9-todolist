@@ -18,7 +18,8 @@ public abstract class AbstractDao {
 			throw new RuntimeException(e);
 		}
 		
-		return DriverManager.getConnection(URL, "root", "root_Admin");
+//		return DriverManager.getConnection(URL, "root", "root_Admin"); //Péter
+		return DriverManager.getConnection(URL, "root", "root"); //Saját
 	}
 	
 }
